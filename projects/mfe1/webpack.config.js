@@ -34,8 +34,8 @@ module.exports = {
         name: "mfe1",
         filename: "remoteEntry.js",  // 2-3K w/ Meta Data
         exposes: {
-            // 'Flight': './projects/mfe1/src/app/flights/flights.module.ts',
-            'MicroCard':'./projects/mfe1/src/app/micro-card/micro-card.module.ts'
+            './Module1': './projects/mfe1/src/app/flights/flights.module.ts',
+            './Module2':'./projects/mfe1/src/app/micro-card/micro-card.module.ts'
         },        
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },

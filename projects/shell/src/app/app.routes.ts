@@ -19,7 +19,7 @@ export const APP_ROUTES: Routes = [
       loadChildren: () => loadRemoteModule({
           type: 'module',
           remoteEntry: URL,
-          exposedModule: 'Flight'
+          exposedModule: './Module1'
         })
         .then(m => m.FlightsModule) 
     },
@@ -28,7 +28,7 @@ export const APP_ROUTES: Routes = [
       loadChildren: () => loadRemoteModule({
           type: 'module',
           remoteEntry: URL,
-          exposedModule: 'MicroCard'
+          exposedModule: './Module2'
         })
         .then(m => m.MicroCardModule) 
     },
