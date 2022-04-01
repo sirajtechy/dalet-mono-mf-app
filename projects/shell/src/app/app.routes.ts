@@ -6,13 +6,13 @@ import { NotFoundComponent } from './not-found/not-found.component';
 const URL = 'http://localhost:3000/remoteEntry.js';
 
 export const APP_ROUTES: Routes = [
-    {
-      path: '',
-      component: HomeComponent,
-      pathMatch: 'full'
-    },
+    // {
+    //   path: 'home',
+    //   component: HomeComponent,
+    //   pathMatch: 'full'
+    // },
 
-    // Your route here:
+    // // Your route here:
 
     {
       path: 'flights',
@@ -24,7 +24,7 @@ export const APP_ROUTES: Routes = [
         .then(m => m.FlightsModule) 
     },
     {
-      path: 'micro-card',
+      path: '',
       loadChildren: () => loadRemoteModule({
           type: 'module',
           remoteEntry: URL,
