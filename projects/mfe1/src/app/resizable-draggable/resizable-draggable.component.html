@@ -1,0 +1,30 @@
+<!-- <div #box class="resizable-draggable" 
+    [style.width.px]="width || 350"
+    [style.height.px]="height || 150"
+    [style.transform]="'translate3d('+ left + 'px,' + top  + 'px,' + '0px)'"
+    [class.active]="status === 1 || status === 2"
+    (mousedown)="setStatus($event, 2)"
+    (window:mouseup)="setStatus($event, 0)"
+>
+    <div class="resize-action" (mousedown)="setStatus($event, 1)"></div>
+    <span>{{width | number:'1.0-0'}}px</span>
+    <span>{{height | number:'1.0-0'}}px</span>
+    <span>({{left}}, {{top}})</span>
+</div> -->
+<!-- <div class="example-box" cdkDrag>
+    I can only be dragged using the handle
+  
+    <div class="example-handle" cdkDragHandle>
+      <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+        <path d="M0 0h24v24H0z" fill="none"></path>
+      </svg>
+    </div>
+  </div> -->
+
+ 
+<div class="example-box">
+  <div cdkDropList cdkDropListOrientation="horizontal" class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let timePeriod of timePeriods" cdkDrag>{{timePeriod}}</div>
+  </div>
+</div>

@@ -34,7 +34,7 @@
 </style>
 
 <div id="container">
-  
+
     <div>
         <img src="../../../assets/dalet.png" width="75">
     </div>
@@ -48,6 +48,9 @@
     <div>
     </div>
     <div>
-        <ng-container #vc></ng-container>
+        <button class="btn btn-primary" (click)="onCreateServer()">Press Me</button>
+        <input type="text" class="form-control" [(ngModel)]="userData" />
+
+        <p>{{userData}}</p>
     </div>
 </div>

@@ -32,6 +32,15 @@ export const APP_ROUTES: Routes = [
         })
         .then(m => m.MicroCardModule) 
     },
+    {
+      path: '',
+      loadChildren: () => loadRemoteModule({
+          type: 'module',
+          remoteEntry: URL,
+          exposedModule: './ResizeDrag'
+        })
+        .then(m => m.ResizeDragModule) 
+    },
 
     {
       path: '**',

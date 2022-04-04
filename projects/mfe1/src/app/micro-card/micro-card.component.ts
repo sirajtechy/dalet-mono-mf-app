@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-micro-card',
@@ -6,4 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./micro-card.component.css']
 })
 export class MicroCardComponent {
+  userData = '';
+  serverStatus = "Server is not enabled"
+
+  onCreateServer() {
+    this.serverStatus = "Server is created nw "
+  }
+//   onUpdateServerName(event:Event){
+//   this.userData = (<HTMLInputElement>event.target).value ; 
+// }
 }
+
+
