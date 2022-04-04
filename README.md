@@ -6,10 +6,14 @@ Shell App and Micro App Setup
 
 `http://localhost:5000`
 
-# Micro App 
+# Micro App 1 (Nicolas App ;-) )  
 
 `http://localhost:3000`
 
+# Micro App 2 (Itay App ;-) ) 
+
+
+`http://localhost:3002`
 
 
 
