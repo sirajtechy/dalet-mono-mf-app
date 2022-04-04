@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MicroCardDaletComponent } from './micro-card-dalet.component';
+import { ItayHomeComponent } from './itay-home.component';
 
-describe('MicroCardDaletComponent', () => {
-  let component: MicroCardDaletComponent;
-  let fixture: ComponentFixture<MicroCardDaletComponent>;
+describe('ItayHomeComponent', () => {
+  let component: ItayHomeComponent;
+  let fixture: ComponentFixture<ItayHomeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MicroCardDaletComponent ]
+      declarations: [ ItayHomeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MicroCardDaletComponent);
+    fixture = TestBed.createComponent(ItayHomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

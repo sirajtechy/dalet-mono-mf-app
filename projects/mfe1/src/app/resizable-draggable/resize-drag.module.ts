@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 import { AuthLibModule } from 'auth-lib';
 import { SharedLibModule } from 'shared-lib';
 import { DRAG_RESIZE_ROUTES } from './resize-drag.routes';
-import { ResizableDraggableComponent } from './resizable-draggable.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 

@@ -1,19 +1,25 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MicroCardDaletComponent } from './components/micro-card-dalet/micro-card-dalet.component';
-// import { DraggableResizableComponent } from './draggable-resizable/draggable-resizable.component';
-
+import { ItayMicroCardComponent } from './itay-micro-card/itay-micro-card.component';
+import { ItayMicroCardModule } from './itay-micro-card/itay-micro-card.module';
+import { ItayHomeComponent } from './itay-home/itay-home.component';
+import { APP_ROUTES } from './app.routes';
 @NgModule({
   declarations: [
     AppComponent,
-    MicroCardDaletComponent
+    ItayHomeComponent,
+    ItayMicroCardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    ItayMicroCardModule,
+    RouterModule.forRoot(APP_ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]

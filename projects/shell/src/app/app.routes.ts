@@ -1,10 +1,9 @@
 import { loadRemoteModule } from '@angular-architects/module-federation';
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-const URL = 'http://localhost:3000/remoteEntry.js';
-
+const MICRO_APP_ONE_URL = 'http://localhost:3000/remoteEntry.js';
+const MICRO_APP_TWO_URL = 'http://localhost:3002/remoteEntry.js'
 export const APP_ROUTES: Routes = [
     // {
     //   path: 'home',
@@ -15,20 +14,11 @@ export const APP_ROUTES: Routes = [
     // // Your route here:
 
     {
-      path: 'flights',
-      loadChildren: () => loadRemoteModule({
-          type: 'module',
-          remoteEntry: URL,
-          exposedModule: './Module1'
-        })
-        .then(m => m.FlightsModule) 
-    },
-    {
       path: '',
       loadChildren: () => loadRemoteModule({
           type: 'module',
-          remoteEntry: URL,
-          exposedModule: './Module2'
+          remoteEntry: MICRO_APP_ONE_URL,
+          exposedModule: './MicroCard'
         })
         .then(m => m.MicroCardModule) 
     },
@@ -36,10 +26,19 @@ export const APP_ROUTES: Routes = [
       path: '',
       loadChildren: () => loadRemoteModule({
           type: 'module',
-          remoteEntry: URL,
+          remoteEntry: MICRO_APP_ONE_URL,
           exposedModule: './ResizeDrag'
         })
         .then(m => m.ResizeDragModule) 
+    },
+    {
+      path: '',
+      loadChildren: () => loadRemoteModule({
+          type: 'module',
+          remoteEntry: MICRO_APP_TWO_URL,
+          exposedModule: './ItayMicroCard'
+        })
+        .then(m => m.ItayMicroCardModule) 
     },
 
     {

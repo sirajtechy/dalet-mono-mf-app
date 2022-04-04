@@ -5,8 +5,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AuthLibModule } from 'auth-lib';
 import { SharedLibModule } from 'shared-lib';
-import { MicroCardComponent } from './micro-card.component';
-
 @NgModule({
   imports: [
     CommonModule,
@@ -16,7 +14,6 @@ import { MicroCardComponent } from './micro-card.component';
     RouterModule.forChild(MICRO_CARD_ROUTES)
   ],
   declarations: [
-    MicroCardComponent
   ]
 })
 export class MicroCardModule { }

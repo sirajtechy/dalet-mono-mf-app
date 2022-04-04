@@ -308,7 +308,7 @@
 							"projects/mfe2/src/styles.css"
 						],
 						"scripts": [],
-						"extraWebpackConfig": "projects/mfe1/webpack.config.js"
+						"extraWebpackConfig": "projects/mfe2/webpack.config.js"
 					},
 					"configurations": {
 						"production": {
@@ -348,7 +348,7 @@
 					"configurations": {
 						"production": {
 							"browserTarget": "mfe2:build:production",
-							"extraWebpackConfig": "projects/mfe1/webpack.prod.config.js"
+							"extraWebpackConfig": "projects/mfe2/webpack.prod.config.js"
 						},
 						"development": {
 							"browserTarget": "mfe2:build:development"
