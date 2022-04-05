@@ -5,8 +5,6 @@ import { RouterModule } from '@angular/router';
 import { AuthLibModule } from 'auth-lib';
 import { SharedLibModule } from 'shared-lib';
 import { DRAG_RESIZE_ROUTES } from './resize-drag.routes';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -15,8 +13,6 @@ import { MatIconModule } from '@angular/material/icon';
     AuthLibModule,
     SharedLibModule,
     FormsModule,
-    MatIconModule,
-    MatToolbarModule,
     RouterModule.forChild(DRAG_RESIZE_ROUTES)
   ],
   declarations: [

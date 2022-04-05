@@ -1,5 +1,7 @@
-import {Component} from '@angular/core';
-import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+
 /**
  * @title Basic Drag&Drop
  */
@@ -9,20 +11,26 @@ import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
   styleUrls: ['./resizable-draggable.component.css'],
 })
 export class ResizableDraggableComponent {
-  if(localStorage){
-      
+  constructor(private http: HttpClient) {
+
   }
-  timePeriods = [
-    'Bronze age',
-    'Iron age',
-    'Middle ages',
-    'Early modern period',
-    'Long nineteenth century',
+  daletProducts = [
+    'Dalet Flex',
+    'Dalet Pyramid',
+    'Dalet Galaxy',
+    'Dalet Cube',
+    'Dalet One Play',
   ];
+  onDragDropSave(event:Event) {
+    alert('hi')
+    this.http.post('https://dalet-assignment-default-rtdb.firebaseio.com/postData.json', this.daletProducts).subscribe(responseData => {
+      console.log(responseData)
+    })
+  }
 
   drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.timePeriods, event.previousIndex, event.currentIndex);
-   const data =  localStorage.setItem("draggedItems",JSON.stringify(this.timePeriods))
-   console.log(localStorage.getItem("draggedItems"))
+    moveItemInArray(this.daletProducts, event.previousIndex, event.currentIndex);
+    // const data = localStorage.setItem("draggedItems", JSON.stringify(this.daletProducts))
+    // console.log(localStorage.getItem("draggedItems"))
   }
 }

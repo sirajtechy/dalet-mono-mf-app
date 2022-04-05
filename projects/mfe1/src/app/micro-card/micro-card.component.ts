@@ -9,12 +9,12 @@ export class MicroCardComponent {
   userData = '';
   serverStatus = "Server is not enabled"
 
+  
   onCreateServer() {
     this.serverStatus = "Server is created nw "
+    alert(this.serverStatus)
   }
-//   onUpdateServerName(event:Event){
-//   this.userData = (<HTMLInputElement>event.target).value ; 
-// }
+
 }
 
 
